@@ -2,8 +2,9 @@ const alexaSkillKit = require('alexa-skill-kit');
 const AlexaMessageBuilder = require('alexa-message-builder');
 const request = require('request-promise');
 const imgur = require('imgur');
+const secrets = require('./secrets');
 
-imgur.setClientId('31f3d3012240062');
+imgur.setClientId(secrets.imgur.client_id);
 imgur.setAPIUrl('https://api.imgur.com/3/');
 
 exports.handler = function(event, context) {
